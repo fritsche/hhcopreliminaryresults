@@ -1,0 +1,6 @@
+require(PMCMRplus)
+options("width"=10000)
+ARRAY <- c(3.3E-5,2.7E-5,2.7E-5,3.6E-5,3.7E-5,3.8E-5,4.7E-5,2.8E-5,1.8E-5,2.0E-5,3.7E-5,2.3E-5,3.1E-5,3.6E-5,2.9E-5,1.5E-5,2.5E-5,3.9E-5,3.3E-5,4.1E-5,1.9E-5,2.2E-5,1.8E-5,1.9E-5,2.4E-5,2.9E-5,1.7E-5,1.7E-5,2.2E-5,1.9E-5,3.1E-5,1.4E-5,5.0E-6,1.9E-5,1.4E-5,7.0E-6,2.1E-5,2.3E-5,7.0E-6,2.9E-5)
+categs<-as.factor(rep(c("HHCORandom","HHCOR2"),each=20));
+result <- kruskal.test(ARRAY,categs)
+print(result);pos_teste<-kwAllPairsNemenyiTest(ARRAY, categs, method='Tukey');print(pos_teste);
